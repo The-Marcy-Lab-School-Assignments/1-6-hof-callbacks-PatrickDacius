@@ -1,16 +1,47 @@
-const myForEach = () => {
+const myForEach = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i])
+  }
 };
 
-const myMap = () => {
+const myMap = (arr, callback) => {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(callback(arr[i]))
+  }
+  return newArr
 };
 
-const myFind = () => {
+const myFind = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      return arr[i]
+    }
+  }
+  return undefined
+}
+
+
+const myFilter = (arr, callback) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      newArr.push((arr[i]));
+    }
+  }
+  return newArr
 };
 
-const myFilter = () => {
-};
 
-const sortWords = () => {
+
+const sortWords = (arr, callback) => {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+
+    }
+  }
+  return newArr
 };
 
 const sortNumbers = () => {
